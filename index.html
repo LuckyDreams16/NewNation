@@ -1,44 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Nation</title>
     <style>
         body {
-            background-color: #0a2a43; /* Mörkblå nyans */
-            color: #ffffff;
+            margin: 0;
             font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        .hero {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .bg-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .hero-content {
+            position: relative;
+            height: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            text-align: center;
+            padding: 0 20px;
+            background: rgba(0, 0, 0, 0.4); /* lätt mörkläggning */
+        }
+
+        h1 {
+            font-size: 2.8em;
             margin: 0;
         }
-        h1 {
-            font-size: 2.5em;
-        }
+
         p {
             font-size: 1.2em;
         }
     </style>
-    <!-- Hero med video-bakgrund -->
-<section class="hero">
-  <video autoplay muted loop playsinline class="bg-video">
-    <source src="din-video.mp4" type="video/mp4">
-    Din webbläsare stödjer inte video.
-  </video>
-  <div class="hero-content">
-    <h1>Välkommen till New Nation</h1>
-    <p>En ny gemenskap byggd på brödraskap och framtidstro.</p>
-  </div>
-</section>
-
 </head>
 <body>
-    <h1>Välkommen till New Nation</h1>
-    <p>Det här är en första grundläggande version av startsidan. Vi bygger vidare härifrån!</p>
+
+    <!-- Hero med video-bakgrund -->
+    <section class="hero">
+        <video autoplay muted loop playsinline class="bg-video">
+            <source src="" type="video/mp4">
+            Din webbläsare stödjer inte video.
+        </video>
+        <div class="hero-content">
+            <h1>Välkommen till New Nation</h1>
+            <p>En ny gemenskap byggd på brödraskap och framtidstro.</p>
+        </div>
+    </section>
+
 </body>
 </html>
+
+
+
 
