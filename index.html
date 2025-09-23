@@ -9,6 +9,7 @@
             margin: 0;
             font-family: Arial, sans-serif;
             color: white;
+            background-color: #0a2a43;
         }
 
         .hero {
@@ -21,14 +22,23 @@
             position: absolute;
             top: 0;
             left: 0;
-            min-width: 100%;
-            min-height: 100%;
+            width: 100%;
+            height: 100%;
             object-fit: cover;
             z-index: -1;
         }
 
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5); /* mörk overlay över videon för läsbarhet */
+            z-index: 0;
+        }
+
         .hero-content {
             position: relative;
+            z-index: 1;
             height: 100%;
             display: flex;
             flex-direction: column;
@@ -36,7 +46,6 @@
             justify-content: center;
             text-align: center;
             padding: 0 20px;
-            background: rgba(0, 0, 0, 0.4); /* lätt mörkläggning */
         }
 
         h1 {
@@ -51,9 +60,8 @@
 </head>
 <body>
 
-    <!-- Hero med video-bakgrund -->
     <section class="hero">
-        <video autoplay muted loop playsinline class="bg-video">
+        <video autoplay muted loop playsinline class="bg-video" controls>
             <source src="videos/luckydreams16_httpss.mj.runv5qJKSbK4hU_make_this_more_active__0cbc8346-6656-491a-adb5-ebdda6fecb61_2.mp4" type="video/mp4">
             Din webbläsare stödjer inte video.
         </video>
@@ -65,8 +73,3 @@
 
 </body>
 </html>
-
-
-
-
-
