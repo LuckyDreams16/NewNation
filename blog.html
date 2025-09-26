@@ -1,37 +1,181 @@
-<section id="blog" class="blog-section">
-  <div class="container">
-    <h2 class="blog-title">Latest Articles</h2>
-    <div class="blog-grid">
-      <article class="blog-card">
-        <img src="path/to/image1.jpg" alt="Article 1" class="blog-card-img" />
-        <div class="blog-card-content">
-          <h3 class="blog-card-title">Article Title 1</h3>
-          <p class="blog-card-excerpt">
-            A short excerpt or summary of the article. Keep it to ~2‑3 lines.
-          </p>
-          <a href="blog/article1.html" class="blog-card-link">Read more →</a>
-        </div>
-      </article>
-      <article class="blog-card">
-        <img src="path/to/image2.jpg" alt="Article 2" class="blog-card-img" />
-        <div class="blog-card-content">
-          <h3 class="blog-card-title">Article Title 2</h3>
-          <p class="blog-card-excerpt">
-            Another teaser text for article 2.
-          </p>
-          <a href="blog/article2.html" class="blog-card-link">Read more →</a>
-        </div>
-      </article>
-      <article class="blog-card">
-        <img src="path/to/image3.jpg" alt="Article 3" class="blog-card-img" />
-        <div class="blog-card-content">
-          <h3 class="blog-card-title">Article Title 3</h3>
-          <p class="blog-card-excerpt">
-            Another teaser text for article 3.
-          </p>
-          <a href="blog/article3.html" class="blog-card-link">Read more →</a>
-        </div>
-      </article>
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blogg | New Nation</title>
+  <link href="style.css" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0a0f1c;
+      color: white;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(10, 15, 28, 0.95);
+      z-index: 1000;
+      box-shadow: 0 0 10px #00fff7;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      color: #00fff7;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #00fff7;
+    }
+
+    .blog-section {
+      padding: 120px 2rem 60px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .blog-title {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      color: #00fff7;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .blog-card {
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(0, 255, 247, 0.2);
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px #00fff7;
+    }
+
+    .blog-card-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .blog-card-content {
+      padding: 1.2rem;
+    }
+
+    .blog-card-title {
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+      color: #00fff7;
+    }
+
+    .blog-card-excerpt {
+      font-size: 1rem;
+      color: #ccc;
+      margin-bottom: 1rem;
+    }
+
+    .blog-card-link {
+      text-decoration: none;
+      color: #00fff7;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .blog-card-link:hover {
+      color: #ffffff;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">New Nation</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Hem</a></li>
+        <li><a href="blog.html">Blogginlägg</a></li>
+        <li><a href="#">Om oss</a></li>
+        <li><a href="#">Tjänster</a></li>
+        <li><a href="#">Mötesplatser</a></li>
+        <li><a href="#">Erbjudanden</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="blog" class="blog-section">
+    <div class="container">
+      <h2 class="blog-title">Senaste artiklarna</h2>
+      <div class="blog-grid">
+        <article class="blog-card">
+          <img src="path/to/image1.jpg" alt="Artikel 1" class="blog-card-img" />
+          <div class="blog-card-content">
+            <h3 class="blog-card-title">Titel på artikel 1</h3>
+            <p class="blog-card-excerpt">En kort beskrivning av artikel 1.</p>
+            <a href="blog/article1.html" class="blog-card-link">Läs mer →</a>
+          </div>
+        </article>
+        <article class="blog-card">
+          <img src="path/to/image2.jpg" alt="Artikel 2" class="blog-card-img" />
+          <div class="blog-card-content">
+            <h3 class="blog-card-title">Titel på artikel 2</h3>
+            <p class="blog-card-excerpt">En kort beskrivning av artikel 2.</p>
+            <a href="blog/article2.html" class="blog-card-link">Läs mer →</a>
+          </div>
+        </article>
+        <article class="blog-card">
+          <img src="path/to/image3.jpg" alt="Artikel 3" class="blog-card-img" />
+          <div class="blog-card-content">
+            <h3 class="blog-card-title">Titel på artikel 3</h3>
+            <p class="blog-card-excerpt">En kort beskrivning av artikel 3.</p>
+            <a href="blog/article3.html" class="blog-card-link">Läs mer →</a>
+          </div>
+        </article>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+
+</body>
+</html>
+
