@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artikel 1 | New Nation</title>
+  <link href="../style.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0a0f1c;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(10, 15, 28, 0.95);
+      z-index: 1000;
+      box-shadow: 0 0 10px #00fff7;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+    .logo {
+      font-size: 1.5rem;
+      color: #00fff7;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    .nav-links a:hover {
+      color: #00fff7;
+    }
+    .article-container {
+      max-width: 800px;
+      margin: 140px auto 80px;
+      padding: 0 1rem;
+    }
+    .article-title {
+      font-size: 2.5rem;
+      color: #00fff7;
+      margin-bottom: 0.5rem;
+    }
+    .article-meta {
+      font-size: 0.9rem;
+      color: #aaa;
+      margin-bottom: 2rem;
+    }
+    .article-img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+    }
+    .article-content p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #ddd;
+      margin-bottom: 1.5rem;
+    }
+    .quote-box {
+      border-left: 4px solid #00fff7;
+      padding-left: 1rem;
+      margin: 2rem 0;
+      font-style: italic;
+      color: #aaa;
+    }
+    .tags {
+      margin-top: 2rem;
+    }
+    .tag {
+      display: inline-block;
+      background-color: #00fff7;
+      color: #000;
+      padding: 0.3rem 0.8rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      margin-right: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">New Nation</div>
+      <ul class="nav-links">
+        <li><a href="../index.html">Hem</a></li>
+        <li><a href="../blog.html">Blogginlägg</a></li>
+        <li><a href="#">Om oss</a></li>
+        <li><a href="#">Tjänster</a></li>
+        <li><a href="#">Mötesplatser</a></li>
+        <li><a href="#">Erbjudanden</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="article-container">
+    <h1 class="article-title">Varför online-gemenskaper förändrar allt</h1>
+    <p class="article-meta">📅 Publicerad: 27 september 2025 | ✍️ Av: Redaktionen | 🗂 Kategori: Digital kultur</p>
+    <img src="https://source.unsplash.com/random/800x400?community,tech" alt="Artikelbild" class="article-img" />
+
+    <div class="article-content">
+      <p>I takt med att världen digitaliseras har plattformar som Reddit, Discord och forum som New Nation förändrat hur vi formar gemenskaper. Det handlar inte längre bara om att dela information – det handlar om att bygga broar mellan individer som annars aldrig hade träffats.</p>
+      <p>På Reddit kan du hitta nischade subkulturer om allt från strategi och prepping till filosofi och AI. Likasinnade diskuterar, argumenterar och lär av varandra – helt utan geografiska gränser.</p>
+      <div class="quote-box">
+        "Det mest kraftfulla som hänt är att främlingar blivit bröder – för att de såg samma idéer och kände samma hunger för något större."
+      </div>
+      <p>Det vi ser är inte bara underhållning, det är en slags digital evolution. Ett exempel? Subredditen r/AskHistorians erbjuder mer kunskap än många skolor. r/Preppers är en global tankesmedja för motståndskraft. Och Discord? Där sker samtalen i realtid.</p>
+      <p>New Nation bygger vidare på samma princip – men med riktning och mål. Här handlar det inte bara om att hitta andra, utan att bygga något med dem.</p>
+
+      <div class="tags">
+        <span class="tag">#Gemenskap</span>
+        <span class="tag">#Strategi</span>
+        <span class="tag">#Futurism</span>
+        <span class="tag">#Redditinspirerat</span>
+      </div>
+    </div>
+
+    <div id="disqus_thread" style="margin-top: 4rem;"></div>
+    <script>
+      var disqus_config = function () {
+        this.page.url = window.location.href;
+        this.page.identifier = window.location.pathname;
+      };
+      (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://newnation.disqus.com/embed.js'; // Byt "newnation" till ditt Disqus-ID
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Aktivera JavaScript för att se kommentarerna från Disqus.</noscript>
+  </main>
+</body>
+</html>
